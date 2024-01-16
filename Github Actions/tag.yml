@@ -2,7 +2,7 @@ name: Tag Workflow
 
 on:
   push:
-    tags:
+    branches:
       - main
 
 jobs:
