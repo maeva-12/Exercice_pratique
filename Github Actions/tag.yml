@@ -3,7 +3,7 @@ name: Tag Workflow
 on:
   push:
     tags:
-      - '*'
+      - 'release2*'
 
 jobs:
   job1:
