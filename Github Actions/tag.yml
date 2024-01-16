@@ -1,6 +1,6 @@
 name: Tag Workflow
 
-on : push
+on : [push]
       
 jobs:
   job1:
