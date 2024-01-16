@@ -1,7 +1,9 @@
 name: Tag Workflow
 
-on : [push]
-      
+on :
+  push:
+    tags:
+      - 'release1*'     
 jobs:
   job1:
     runs-on: ubuntu-latest
