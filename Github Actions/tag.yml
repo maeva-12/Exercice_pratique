@@ -19,5 +19,5 @@ jobs:
       - name: Afficher la valeur de ma variable
         run: echo $VAR1
 
-# git tag release2    
+#git tag release2    
 #git push origin release1
