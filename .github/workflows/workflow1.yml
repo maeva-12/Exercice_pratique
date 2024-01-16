@@ -29,3 +29,7 @@ jobs:
             echo "Erreur: B doit être un nombre positif."
             exit 1
           fi
+
+#git add .github/workflows/workflow1.yml
+#mkdir -p .github/workflows/ 
+#touch .github/workflows/workflow1.yml  
