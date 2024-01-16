@@ -1,9 +1,7 @@
 name: Tag Workflow
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   job1:
