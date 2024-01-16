@@ -1,14 +1,17 @@
+
 name: Tag Workflow
 
-on :
+on:
   push:
     tags:
-      - release1*     
+      - 'release1*'
+
 jobs:
   job1:
     runs-on: ubuntu-latest
 
-    env: VAR1: "3"
+    env:
+      VAR1: "3"
 
     steps:
       - name: Checkout du code
@@ -16,4 +19,3 @@ jobs:
 
       - name: Afficher la valeur de ma variable
         run: echo $VAR1
-
