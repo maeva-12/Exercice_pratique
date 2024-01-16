@@ -1,4 +1,31 @@
-name: 
+name: Tag Workflow
 
-on: 
+on:
   workflow_dispatch:
+
+env:
+  A: "6"  
+  B: "8"  
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Vérification que A est positif
+        run: |
+          if [ "$A" -le 0 ]; then
+            echo "Erreur: A doit être un nombre positif."
+            exit 1
+          fi
+
+  job2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Vérifier que B est positif
+        run: |
+          if [ "$B" -le 0 ]; then
+            echo "Erreur: B doit être un nombre positif."
+            exit 1
+          fi

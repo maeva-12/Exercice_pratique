@@ -3,7 +3,7 @@ name: Tag Workflow
 on:
   push:
     tags:
-      - 'release2*'
+      - 'release3'
 
 jobs:
   job1:
@@ -44,9 +44,3 @@ jobs:
         run: echo "Le job1 a échoué"
 
 
-#git tag release2    
-#git push origin release1
-
-#crée une condition qui ne s'exécute que si le job 1 a échoué et donne a commande pour déclencher github actions à partir d'un tag release2
-
-#modifie la condition pour qu'elle s'exécute quelque soit le résultat du job1
