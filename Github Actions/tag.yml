@@ -1,8 +1,9 @@
-
 name: Tag Workflow
 
-on:
-  workflow_dispatch:
+on :
+  push:
+    tags:
+      - 'release2'
 
 jobs:
   job1:
@@ -17,3 +18,6 @@ jobs:
 
       - name: Afficher la valeur de ma variable
         run: echo $VAR1
+
+# git tag release2    
+#git push origin release1
