@@ -2,8 +2,6 @@ name: Tag Workflow
 
 on :
   push:
-    tags:
-      - 'v*'
       
 jobs:
   job1:
