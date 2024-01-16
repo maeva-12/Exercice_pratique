@@ -12,12 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Vérification que A est positif
+      - name: Vérifier que A est positif
         run: |
           if [ "$A" -le 0 ]; then
             echo "Erreur: A doit être un nombre positif."
             exit 1
           fi
+      - name: Checkout du code
+        uses: actions/checkout@v2
 
   job2:
     runs-on: ubuntu-latest
@@ -29,4 +31,5 @@ jobs:
             echo "Erreur: B doit être un nombre positif."
             exit 1
           fi
-
+      - name: Checkout du code
+        uses: actions/checkout@v2
