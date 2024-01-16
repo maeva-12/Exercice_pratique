@@ -1,14 +1,15 @@
 name: Tag Workflow
 
-on:
-  workflow_dispatch:
-
+on :
+  push:
+    tags:
+      - 'v*'
+      
 jobs:
   job1:
     runs-on: ubuntu-latest
 
-    env:  
-      VAR1: "3"
+    env: VAR1: "3"
 
     steps:
       - name: Checkout du code
