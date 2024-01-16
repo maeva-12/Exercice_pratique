@@ -2,9 +2,7 @@
 name: Tag Workflow
 
 on:
-  push:
-    tags:
-      - 'release1*'
+  workflow_dispatch:
 
 jobs:
   job1:
