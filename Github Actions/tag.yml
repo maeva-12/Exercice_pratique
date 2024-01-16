@@ -19,6 +19,34 @@ jobs:
       - name: Afficher la valeur de ma variable
         run: echo $VAR1
 
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+
+    env:
+      VAR2: "5"
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v2
+
+      - name: Afficher la valeur de ma variable
+        run: echo $VAR2
+
+  job3:
+    needs: job2
+    runs-on: ubuntu-latest
+
+    if: failure()
+
+    steps:
+      - name: Exécuter si job1 a échoué
+        run: echo "Le job1 a échoué"
+
 
 #git tag release2    
 #git push origin release1
+
+#crée une condition qui ne s'exécute que si le job 1 a échoué et donne a commande pour déclencher github actions à partir d'un tag release2
+
+#modifie la condition pour qu'elle s'exécute quelque soit le résultat du job1
